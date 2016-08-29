@@ -1,0 +1,6 @@
+{
+  "api": {
+    "server": "https://localhost",
+    "port": "8000"
+  }
+}

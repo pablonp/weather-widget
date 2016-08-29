@@ -1,0 +1,26 @@
+{
+  "stylesFiles": {
+    "themes": {
+      "dark":{
+        "path": "/app/commons/styles/themes/",
+        "file": "dark.less"
+      }
+    },
+    "others": {
+      "index": {
+        "path": "/app/",
+        "file": "index.less"
+      },
+      "rtl": {
+        "path": "/app/",
+        "file": "rtl.less"
+      }
+    },
+    "vendor": {
+      "vendor": {
+        "path": "/app/",
+        "file": "vendor.less"
+      }
+    }
+  }
+}
