@@ -35,7 +35,7 @@
       };
 
       init();
-      
+
       /**
        * @name init
        * @description Setups basic structure
@@ -56,6 +56,7 @@
                     deferred.reject(err);
                 });
         } else {
+          $window.alert('Geolocation not supported by the browser.');
           deferred.reject('Geolocation not supported by the browser.');
         }
 
