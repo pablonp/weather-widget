@@ -21,7 +21,7 @@ angular
     $scope.weather = {};
 
     var days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'],
-      defaultSource = 'aeris';
+      defaultSource = 'forecast';
 
     $scope.getDay = function(day) {
       var index = currentDay + day;

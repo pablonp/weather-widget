@@ -50,11 +50,17 @@
 
           var location = data.timezone.split('/');
 
-          $log.info(data);
-          location = {
-            country: location[1].replace('_', ' '),
-            state: location[2].replace('_', ' ')
-          };
+          if (location.length == 1) {
+            location = {
+              country: '',
+              state: location[0].replace(/_/g, " ")
+            };
+          } else {
+            location = {
+              country: location[location.length - 2].replace(/_/g, " "),
+              state: location[location.length - 1].replace(/_/g, " ")
+            };
+          }
 
           WeatherSrv.addWeatherData('forecast', location, data.currently.apparentTemperature, data.daily.summary, forecast);
         })
