@@ -18,3 +18,4 @@ Simple weather widget which allows the user to add new sources from where to get
 
 ## ToDo
 - Add proxy server to avoid having the api keys for the sources in the client side.
+- Updates background image based on user location (maybe connect with flickr?) and weather
