@@ -27,9 +27,11 @@ angular
       var index = currentDay + day;
 
       if (index > 6) {
-        index = (currentDay - day) * -1 - 1;
+        index = (currentDay - day) - 1;
+        if (index < 0)
+            index = index * -1;
       }
-      return days[(index > 6 ? (currentDay - day) * -1 - 1 : index)];
+      return days[index];
     };
 
     var currentDay = new Date().getDay();
