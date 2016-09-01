@@ -1,3 +1,46 @@
-body {
-	background: red;
+#weather-main {
+    background: transparent url(../resources/images/bg.jpg) no-repeat 0 0;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    text-shadow: 2px 0 #666;
+    h1 {
+        margin-bottom: 0;
+        line-height: 1;
+        padding-top: 11px;
+    }
+    h3 {
+        margin: 0 0 10px 0;
+    }
+    .temperature-main {
+        background: rgba(0, 0, 0, .5);
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        h2 {
+            font-size: 14em;
+            line-height: 1;
+            text-align: right;
+            span {
+                font-size: .3em;
+                position: relative;
+                right: 10px;
+                top: -100px;
+            }
+        }
+        .forecast {
+            > div {
+                margin-left: -10px;
+                padding: 0;
+                > div {
+                    text-align: center;
+                    h4 {
+                        border-bottom: 1px solid #FF8400;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
 }

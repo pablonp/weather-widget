@@ -1,3 +1,28 @@
-<div class="container-fluid">
-  {{hello}}
+<div id="weather-main" class="container-fluid">
+    <div class="row temperature-main">
+        <div class="col-md-3">
+            <h2>{{weather.current | number: 0}}<span>°</span></h2>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <h1>
+                    {{weather.location.state}}
+                    <span>{{weather.location.country}}</span>
+                </h1>
+            </div>
+            <div class="row">
+                <h3>{{weather.data[0].summary}}</h3>
+                <span class="min-temp">{{weather.data[0].min | number: 0}}°</span> / <span class="max-temp">{{weather.data[0].max | number: 0}}°</span>
+            </div>
+            <div class="row forecast">
+                <div class="col-md-9">
+                    <div class="col-md-2" ng-if="!$first && !$last" ng-repeat="day in weather.data">
+                        <h4>{{getDay($index)}}</h4>
+                        <span>{{day.max | number: 0}}°</span>
+                        <span>{{day.min | number: 0}}°</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

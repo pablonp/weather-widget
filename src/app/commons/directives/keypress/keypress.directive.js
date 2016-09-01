@@ -3,7 +3,7 @@
     'use strict';
 
     /** @ngInject */
-    function keypress($document, $rootScope, BrandSrv, ParamsSrv) {
+    function keypress($document, $rootScope, ParamsSrv) {
         var secret_active = false;
         var directive = {
             restrict: 'A',
